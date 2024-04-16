@@ -1,0 +1,9 @@
+@use "./typography";
+@use "./colors";
+
+@mixin title(){
+	font-family:typography.$font-jersey;
+	font-size: 70px;
+	color:colors.$secondary-color;
+	margin: 5px 20px;
+}
