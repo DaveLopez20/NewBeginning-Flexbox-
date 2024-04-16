@@ -1,0 +1,76 @@
+// Scss Document
+@use "./vendor/normalize.scss";
+@use "./partials/colors";
+@use "./partials/typography";
+@use "./partials/mixins";
+
+.navigation {background-color: colors.$primary-color; 
+	padding: 15px;
+	nav{ display: flex;
+		justify-content: flex-end;
+		gap: 10px;
+		a{color:colors.$secondary-color ; text-decoration: none;& hover
+	{color: orangered}
+	}
+	}
+}
+
+
+.first, .second, .third { border: 1px solid;
+width: 320px;
+height: 100px;
+
+}
+
+
+.title {
+	font-family:typography.$font-jersey;
+	font-size: 70px;
+	color:colors.$secondary-color;
+	margin: 5px 20px;
+}
+
+.paragraph {
+	@include mixins.title;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.subtitle {
+	font-family: typography.$font-teko;
+}
+
+.image {
+	flex: 1;
+}
+
+
+.body {background-color: chartreuse;}
+
+//Medium screens
+@media (min-width: 768px) {.navigation {background-color: navy;}
+
+}
+
+// Big screens
+@media (min-width: 1024px) {.navigation { background-color: darkred;}
+  
+}
+
+.btn-primary {background-color: colors.$primary-color; color: colors.$secondary-color; font-size: 45px;}
+
+.footer {background-color: colors.$dark-background;}
